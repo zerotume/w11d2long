@@ -26,7 +26,7 @@ const validateLogin = [
         .exists({checkFalsy: true})
         .withMessage('Please provide a password'),
     handleValidationErrors
-]
+];
 
 router.post('/', validateLogin, async (req,res,next) => {
     const {credential, password} = req.body;
